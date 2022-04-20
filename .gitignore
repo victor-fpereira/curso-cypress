@@ -7,3 +7,5 @@ cypress/integration/2-advanced-examples
 cypress/plugins
 cypress/support
 cypress.json
+*.mp4
+*.png

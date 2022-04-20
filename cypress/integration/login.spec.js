@@ -9,12 +9,20 @@
 
 context('Funcionalidade login', () => {
 
+    // Executa antes de cada teste
+    beforeEach(() => {
+        cy.visit('http://lojaebac.ebaconline.art.br/minha-conta')
+    });
+
+    // Executa despois de cada teste
+    afterEach(() => {
+        cy.screenshot()
+    });
+
     // Aqui vão ficar os testes. Cada teste ficará agrupado na funcionalidade
     
     // Teste 1
     it('Deve fazer login com sucesso', () => {
-
-        cy.visit('http://lojaebac.ebaconline.art.br/minha-conta')
         cy.get('#username').type('aluno_ebac@teste.com')
         cy.get('#password').type('teste@teste.com')
         cy.get('.woocommerce-form > .button').click()
@@ -25,7 +33,6 @@ context('Funcionalidade login', () => {
 
     // Teste 2
     it('Deve mostrar mensagem de erro ao errar usuário', () => {
-        cy.visit('http://lojaebac.ebaconline.art.br/minha-conta')
         cy.get('#username').type('aluno_ebac@teste')
         cy.get('#password').type('teste@teste.com')
         cy.get('.woocommerce-form > .button').click()
@@ -35,7 +42,6 @@ context('Funcionalidade login', () => {
     // Teste 3
     // Para rodar exclusivamente um teste, marcar como "it.only"
     it('Deve mostrar mensagem de erro ao errar senha', () => {
-        cy.visit('http://lojaebac.ebaconline.art.br/minha-conta')
         cy.get('#username').type('aluno_ebac@teste.com')
         cy.get('#password').type('teste@teste')
         cy.get('.woocommerce-form > .button').click()
