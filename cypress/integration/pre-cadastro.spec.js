@@ -27,7 +27,7 @@ describe('Funcionalidade pré cadastro', () => {
 
         // Usando como módulo ES6
         cy.get('#reg_email').type(_faker.internet.email())
-        cy.get('#reg_password').type('senha123')
+        cy.get('#reg_password').type('teste@teste')
         cy.get(':nth-child(4) > .button').click()
 
         cy.get('.woocommerce-MyAccount-navigation-link--edit-account > a').click()
