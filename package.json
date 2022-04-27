@@ -1,0 +1,26 @@
+{
+  "name": "curso-cypress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/victor-fpereira/curso-cypress.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/victor-fpereira/curso-cypress/issues"
+  },
+  "homepage": "https://github.com/victor-fpereira/curso-cypress#readme",
+  "devDependencies": {
+    "cypress": "^9.5.4"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^6.1.2"
+  }
+}
