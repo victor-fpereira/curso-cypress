@@ -7,6 +7,6 @@
 # cypress/plugins
 # cypress/support
 # cypress.json
-# *.mp4
-# *.png
+*.mp4
+*.png
 node_modules
